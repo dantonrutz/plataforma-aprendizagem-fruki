@@ -1,21 +1,17 @@
 import Image from 'next/image'
-import logoBranco from '../../public/logo.png'
+import logoFruki from '../../public/logo2.png'
 import LoginForm from '@/components/forms/LoginForm'
 
 export default function LoginScreen() {
   return (
     <main className="flex min-h-screen flex-col gap-10 bg-verdeEscuro">
-      <header className="flex justify-center pt-10">
+      <header className="flex justify-center pt-8">
         <a
           href="https://fruki.com.br/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            src={logoBranco}
-            alt="Logo da Fruki Bebidas"
-            className="w-60 rounded-2xl bg-branco px-4 pb-1"
-          />
+          <Image src={logoFruki} alt="Logo da Fruki Bebidas" className="w-72" />
         </a>
       </header>
       <section className="my-auto flex justify-center px-4">
@@ -32,14 +28,12 @@ export default function LoginScreen() {
           href="https://fruki.com.br/"
           target="_blank"
           rel="noopener noreferrer"
-          className="defaultTransition font-semibold text-preto hover:underline"
+          className="defaultTransition font-semibold hover:underline"
         >
           Fruki Bebidas
         </a>
         <span className="text-verdeEscuro">•</span>
-        <span className="font-semibold text-preto">
-          Plataforma de Aprendizagem
-        </span>
+        <span className="font-semibold">Plataforma de Aprendizagem</span>
       </footer>
     </main>
   )
