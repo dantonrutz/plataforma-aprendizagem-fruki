@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 
 const tokenName = process.env.COOKIE_NAME || ''
+const domainName = process.env.DOMAIN || ''
 
 const token = {
   saveInCookies(accessToken: string) {
@@ -10,7 +11,7 @@ const token = {
       value: accessToken,
       maxAge: 6 * 60 * 60 * 1000, // 6 horas em ms
       httpOnly: true,
-      domain: 'localhost',
+      domain: 'domainName,
       path: '/',
       sameSite: 'lax',
       secure: false,
