@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 
-const tokenName = process.env.COOKIE_NAME || ''
+const tokenName = process.env.NEXT_PUBLIC_COOKIE_NAME || ''
 
 const token = {
   saveInCookies(accessToken: string) {
@@ -22,7 +22,7 @@ const token = {
   },
 
   getFromRequest(req: NextRequest) {
-    console.log(tokenName)
+    console.log('Nome do token -', tokenName)
     console.log('Token com string - ', req.cookies.get('authToken')?.value)
     console.log('Token com env -', req.cookies.get(tokenName)?.value)
     return req.cookies.get(tokenName)?.value
