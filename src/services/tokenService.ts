@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { cookies } from 'next/headers'
 
 const tokenName = process.env.COOKIE_NAME || ''
-const domainName = process.env.DOMAIN || ''
+const domainName = process.env.DOMAIN_NAME || ''
 
 const token = {
   saveInCookies(accessToken: string) {
