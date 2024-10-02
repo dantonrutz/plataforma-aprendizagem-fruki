@@ -11,7 +11,7 @@ const token = {
       value: accessToken,
       maxAge: 6 * 60 * 60 * 1000, // 6 horas em ms
       httpOnly: true,
-      domain: 'domainName,
+      domain: domainName,
       path: '/',
       sameSite: 'lax',
       secure: false,
