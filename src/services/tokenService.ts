@@ -14,7 +14,6 @@ const token = {
       sameSite: 'lax',
       secure: false,
     })
-    console.log('Token salvo -', accessToken)
   },
 
   getFromCookies() {
@@ -22,9 +21,6 @@ const token = {
   },
 
   getFromRequest(req: NextRequest) {
-    console.log('Nome do token -', tokenName)
-    console.log('Token com string - ', req.cookies.get('authToken')?.value)
-    console.log('Token com env -', req.cookies.get(tokenName)?.value)
     return req.cookies.get(tokenName)?.value
   },
 
