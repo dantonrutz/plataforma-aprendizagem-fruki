@@ -8,6 +8,8 @@ export async function middleware(req: NextRequest) {
 
   const tokenSavedInCookies = token.getFromRequest(req)
 
+  console.log('Token - ', tokenSavedInCookies)
+
   const isValidToken = tokenSavedInCookies // && (await token.verifyExpiration(tokenSavedInCookies))
   /* Precisa validar o token no backend...  */
 

@@ -6,6 +6,8 @@ const domainName = process.env.DOMAIN_NAME || ''
 
 const token = {
   saveInCookies(accessToken: string) {
+    console.log('Nome do token - ', tokenName)
+    console.log('Nome do dominio - ', domainName)
     cookies().set({
       name: tokenName,
       value: accessToken,
