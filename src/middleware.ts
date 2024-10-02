@@ -7,6 +7,7 @@ export async function middleware(req: NextRequest) {
   const { nextUrl } = req
 
   const tokenSavedInCookies = token.getFromRequest(req)
+  console.log('teste', req.cookies.get('authToken')?.value)
 
   console.log('Token - ', tokenSavedInCookies)
 

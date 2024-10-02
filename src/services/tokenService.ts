@@ -14,6 +14,7 @@ const token = {
       sameSite: 'lax',
       secure: false,
     })
+    console.log('Token salvo -', accessToken)
   },
 
   getFromCookies() {
@@ -21,6 +22,7 @@ const token = {
   },
 
   getFromRequest(req: NextRequest) {
+    console.log('Token encontrado - ', req.cookies.get(tokenName)?.value)
     return req.cookies.get(tokenName)?.value
   },
 
