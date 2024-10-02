@@ -22,7 +22,9 @@ const token = {
   },
 
   getFromRequest(req: NextRequest) {
-    console.log('Token encontrado - ', req.cookies.get(tokenName)?.value)
+    console.log(tokenName)
+    console.log('Token com string - ', req.cookies.get('authToken')?.value)
+    console.log('Token com env -', req.cookies.get(tokenName)?.value)
     return req.cookies.get(tokenName)?.value
   },
 
